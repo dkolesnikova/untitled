@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'junit:junit:4.13.1'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    implementation(
+            'com.codeborne:selenide:6.15.0',
+            'org.projectlombok:lombok:1.18.24',
+            'org.seleniumhq.selenium:selenium-java:4.11.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter',
+                        'org.testng:testng:7.9.0'
+
+}
+
+test {
+    useTestNG()
+}
