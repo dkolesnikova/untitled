@@ -13,4 +13,11 @@ import static com.codeborne.selenide.Selenide.$;
             $(loc).sendKeys(string);
             return this;
         }
+
+        public BaseRouter clearAndInputText(String string) {
+            $(loc).scrollTo();
+            $(loc).clear();
+            $(loc).sendKeys(string);
+            return this;
+        }
 }
