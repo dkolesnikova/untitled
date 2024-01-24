@@ -11,9 +11,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class Label extends BaseRouter {
     private By loc;
-    public BaseRouter shouldHaveText(String string){
+
+    public BaseRouter shouldHaveText(String string) {
         $(loc).shouldHave(Condition.exactText(string));
         return this;
     }
-
 }

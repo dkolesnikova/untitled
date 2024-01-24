@@ -1,12 +1,12 @@
 package data.dataClasses;
 
 import com.github.javafaker.Faker;
-import data.models.User;
+import data.models.Object;
 
-public class UserData {
-    public static User getRandomUser(){
+public class ObjectData {
+    public static Object getRandomUser() {
         Faker faker = new Faker();
-        return User.builder()
+        return Object.builder()
                 .name(faker.name().fullName())
                 .password(faker.animal().name())
                 .comments(faker.lordOfTheRings().location())

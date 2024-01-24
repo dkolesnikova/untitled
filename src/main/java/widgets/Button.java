@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 @AllArgsConstructor
 public class Button extends BaseRouter {
     private By loc;
+
     public BaseRouter click() {
         $(loc).scrollTo();
         $(loc).click();
