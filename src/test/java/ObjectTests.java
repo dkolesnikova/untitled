@@ -20,14 +20,22 @@ public class ObjectTests extends BaseTest {
 
 
     @Test
-    void check2() {
+    void objectCanBeSavedWithTheRequiredFields() {
         Object object = getRandomUser();
         authPage.name.inputText(object.getName());
         authPage.password.clearAndInputText(object.getPassword());
-        authPage.radioButton.clickItem(RadioButtons.RADIO_3);
+        authPage.radioButton.clickItem(object.getRadioButton());
         authPage.submitButton.click();
         resultsPage.name.shouldHaveText(object.getName());
         resultsPage.password.shouldHaveText(object.getPassword());
+        resultsPage.radioValue.shouldHaveText(object.getRadioButton().getValue());
+    }
+
+    @Test
+    void objectCantSavedWithEmptyFields() {
+        authPage.comments.clearText();
+        authPage.submitButton.click();
+        resultsPage.formResults.shouldBeNotVisible();
     }
 
 }

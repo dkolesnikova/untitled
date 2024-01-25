@@ -16,4 +16,8 @@ public class Label extends BaseRouter {
         $(loc).shouldHave(Condition.exactText(string));
         return this;
     }
+    public BaseRouter shouldBeNotVisible(){
+        $(loc).shouldNot(Condition.exist);
+        return this;
+    }
 }

@@ -17,7 +17,7 @@ public class RadioButton extends BaseRouter {
     public BaseRouter clickItem(RadioButtons button) {
         $(loc).scrollTo();
         ElementsCollection collection = $(loc).$$x("input");
-        collection.filter(Condition.text(button.getValue())).get(0).click();
+        collection.filter(Condition.value(button.getValue())).get(0).click();
         return this;
     }
 }

@@ -22,4 +22,9 @@ public class InputText extends BaseRouter {
         $(loc).sendKeys(string);
         return this;
     }
+    public BaseRouter clearText(){
+        $(loc).scrollTo();
+        $(loc).clear();
+        return this;
+    }
 }

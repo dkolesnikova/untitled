@@ -17,6 +17,7 @@ public interface Locators {
     }
 
     interface ResultsPage {
+        By formResults = By.cssSelector("centered form-results");
         By name = By.cssSelector("#_valueusername");
         By password = By.cssSelector("#_valuepassword");
         By comments = By.cssSelector("#_valuecomments");
